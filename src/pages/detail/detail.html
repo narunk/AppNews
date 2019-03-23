@@ -11,5 +11,14 @@
 </ion-header>
 
 <ion-content padding>
-
+  <img [src]="item.thumbnail" style="width:100%">
+  <ion-card>
+      <ion-card-header>
+        {{item.title}}
+      </ion-card-header>
+      <ion-card-content>
+        <p>ผู้แต่ง/ผู้เขียน : {{item.auther}} </p>
+        <a href="{{item.url}}" target="blank" ion-button block>กดเพื่ออ่าน</a>
+      </ion-card-content>
+  </ion-card>
 </ion-content>

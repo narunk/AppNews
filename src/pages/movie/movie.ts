@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
+import { DetailPage } from '../detail/detail';
 /**
  * Generated class for the MoviePage page.
  *
@@ -26,4 +27,7 @@ export class MoviePage {
     console.log('ionViewDidLoad MoviePage');
   }
 
+  viewDetail(item){
+    this.navCtrl.push(DetailPage ,{item:item})
+  }
 }

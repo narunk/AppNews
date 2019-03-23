@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
+import { DetailPage } from '../detail/detail';
 /**
  * Generated class for the PopularPage page.
  *
@@ -25,5 +26,7 @@ export class PopularPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad PopularPage');
   }
-
+  viewDetail(item){
+    this.navCtrl.push(DetailPage,{item:item})
+  }
 }

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
+import { DetailPage } from '../detail/detail';
 /**
  * Generated class for the SciencePage page.
  *
@@ -24,6 +25,9 @@ export class SciencePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SciencePage');
+  }
+  viewDetail(item){
+    this.navCtrl.push(DetailPage,{item:item})
   }
 
 }
